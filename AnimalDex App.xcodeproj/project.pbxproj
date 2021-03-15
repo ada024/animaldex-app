@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A0C9A03625FF91AA00419764 /* AnimalDex_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C9A03525FF91AA00419764 /* AnimalDex_AppApp.swift */; };
+		A0C9A03825FF91AA00419764 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C9A03725FF91AA00419764 /* ContentView.swift */; };
+		A0C9A03A25FF91AD00419764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C9A03925FF91AD00419764 /* Assets.xcassets */; };
+		A0C9A03D25FF91AD00419764 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C9A03C25FF91AD00419764 /* Preview Assets.xcassets */; };
+		A0C9A04825FF91AD00419764 /* AnimalDex_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C9A04725FF91AD00419764 /* AnimalDex_AppTests.swift */; };
+		A0C9A05325FF91AD00419764 /* AnimalDex_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C9A05225FF91AD00419764 /* AnimalDex_AppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A0C9A04425FF91AD00419764 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0C9A02A25FF91AA00419764 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0C9A03125FF91AA00419764;
+			remoteInfo = "AnimalDex App";
+		};
+		A0C9A04F25FF91AD00419764 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0C9A02A25FF91AA00419764 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0C9A03125FF91AA00419764;
+			remoteInfo = "AnimalDex App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A0C9A03225FF91AA00419764 /* AnimalDex App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnimalDex App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0C9A03525FF91AA00419764 /* AnimalDex_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDex_AppApp.swift; sourceTree = "<group>"; };
+		A0C9A03725FF91AA00419764 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A0C9A03925FF91AD00419764 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A0C9A03C25FF91AD00419764 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A0C9A03E25FF91AD00419764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0C9A04325FF91AD00419764 /* AnimalDex AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AnimalDex AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0C9A04725FF91AD00419764 /* AnimalDex_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDex_AppTests.swift; sourceTree = "<group>"; };
+		A0C9A04925FF91AD00419764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0C9A04E25FF91AD00419764 /* AnimalDex AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AnimalDex AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0C9A05225FF91AD00419764 /* AnimalDex_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDex_AppUITests.swift; sourceTree = "<group>"; };
+		A0C9A05425FF91AD00419764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A0C9A02F25FF91AA00419764 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C9A04025FF91AD00419764 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C9A04B25FF91AD00419764 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A0C9A02925FF91AA00419764 = {
+			isa = PBXGroup;
+			children = (
+				A0C9A03425FF91AA00419764 /* AnimalDex App */,
+				A0C9A04625FF91AD00419764 /* AnimalDex AppTests */,
+				A0C9A05125FF91AD00419764 /* AnimalDex AppUITests */,
+				A0C9A03325FF91AA00419764 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A0C9A03325FF91AA00419764 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0C9A03225FF91AA00419764 /* AnimalDex App.app */,
+				A0C9A04325FF91AD00419764 /* AnimalDex AppTests.xctest */,
+				A0C9A04E25FF91AD00419764 /* AnimalDex AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0C9A03425FF91AA00419764 /* AnimalDex App */ = {
+			isa = PBXGroup;
+			children = (
+				A0C9A03525FF91AA00419764 /* AnimalDex_AppApp.swift */,
+				A0C9A03725FF91AA00419764 /* ContentView.swift */,
+				A0C9A03925FF91AD00419764 /* Assets.xcassets */,
+				A0C9A03E25FF91AD00419764 /* Info.plist */,
+				A0C9A03B25FF91AD00419764 /* Preview Content */,
+			);
+			path = "AnimalDex App";
+			sourceTree = "<group>";
+		};
+		A0C9A03B25FF91AD00419764 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A0C9A03C25FF91AD00419764 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A0C9A04625FF91AD00419764 /* AnimalDex AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				A0C9A04725FF91AD00419764 /* AnimalDex_AppTests.swift */,
+				A0C9A04925FF91AD00419764 /* Info.plist */,
+			);
+			path = "AnimalDex AppTests";
+			sourceTree = "<group>";
+		};
+		A0C9A05125FF91AD00419764 /* AnimalDex AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A0C9A05225FF91AD00419764 /* AnimalDex_AppUITests.swift */,
+				A0C9A05425FF91AD00419764 /* Info.plist */,
+			);
+			path = "AnimalDex AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A0C9A03125FF91AA00419764 /* AnimalDex App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0C9A05725FF91AD00419764 /* Build configuration list for PBXNativeTarget "AnimalDex App" */;
+			buildPhases = (
+				A0C9A02E25FF91AA00419764 /* Sources */,
+				A0C9A02F25FF91AA00419764 /* Frameworks */,
+				A0C9A03025FF91AA00419764 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AnimalDex App";
+			productName = "AnimalDex App";
+			productReference = A0C9A03225FF91AA00419764 /* AnimalDex App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A0C9A04225FF91AD00419764 /* AnimalDex AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0C9A05A25FF91AD00419764 /* Build configuration list for PBXNativeTarget "AnimalDex AppTests" */;
+			buildPhases = (
+				A0C9A03F25FF91AD00419764 /* Sources */,
+				A0C9A04025FF91AD00419764 /* Frameworks */,
+				A0C9A04125FF91AD00419764 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0C9A04525FF91AD00419764 /* PBXTargetDependency */,
+			);
+			name = "AnimalDex AppTests";
+			productName = "AnimalDex AppTests";
+			productReference = A0C9A04325FF91AD00419764 /* AnimalDex AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A0C9A04D25FF91AD00419764 /* AnimalDex AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0C9A05D25FF91AD00419764 /* Build configuration list for PBXNativeTarget "AnimalDex AppUITests" */;
+			buildPhases = (
+				A0C9A04A25FF91AD00419764 /* Sources */,
+				A0C9A04B25FF91AD00419764 /* Frameworks */,
+				A0C9A04C25FF91AD00419764 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0C9A05025FF91AD00419764 /* PBXTargetDependency */,
+			);
+			name = "AnimalDex AppUITests";
+			productName = "AnimalDex AppUITests";
+			productReference = A0C9A04E25FF91AD00419764 /* AnimalDex AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0C9A02A25FF91AA00419764 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					A0C9A03125FF91AA00419764 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					A0C9A04225FF91AD00419764 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = A0C9A03125FF91AA00419764;
+					};
+					A0C9A04D25FF91AD00419764 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = A0C9A03125FF91AA00419764;
+					};
+				};
+			};
+			buildConfigurationList = A0C9A02D25FF91AA00419764 /* Build configuration list for PBXProject "AnimalDex App" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A0C9A02925FF91AA00419764;
+			productRefGroup = A0C9A03325FF91AA00419764 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0C9A03125FF91AA00419764 /* AnimalDex App */,
+				A0C9A04225FF91AD00419764 /* AnimalDex AppTests */,
+				A0C9A04D25FF91AD00419764 /* AnimalDex AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A0C9A03025FF91AA00419764 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C9A03D25FF91AD00419764 /* Preview Assets.xcassets in Resources */,
+				A0C9A03A25FF91AD00419764 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C9A04125FF91AD00419764 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C9A04C25FF91AD00419764 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A0C9A02E25FF91AA00419764 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C9A03825FF91AA00419764 /* ContentView.swift in Sources */,
+				A0C9A03625FF91AA00419764 /* AnimalDex_AppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C9A03F25FF91AD00419764 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C9A04825FF91AD00419764 /* AnimalDex_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C9A04A25FF91AD00419764 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C9A05325FF91AD00419764 /* AnimalDex_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A0C9A04525FF91AD00419764 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0C9A03125FF91AA00419764 /* AnimalDex App */;
+			targetProxy = A0C9A04425FF91AD00419764 /* PBXContainerItemProxy */;
+		};
+		A0C9A05025FF91AD00419764 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0C9A03125FF91AA00419764 /* AnimalDex App */;
+			targetProxy = A0C9A04F25FF91AD00419764 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A0C9A05525FF91AD00419764 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A0C9A05625FF91AD00419764 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A0C9A05825FF91AD00419764 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AnimalDex App/Preview Content\"";
+				DEVELOPMENT_TEAM = T2759895US;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "AnimalDex App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.AnimalDex-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A0C9A05925FF91AD00419764 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AnimalDex App/Preview Content\"";
+				DEVELOPMENT_TEAM = T2759895US;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "AnimalDex App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.AnimalDex-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A0C9A05B25FF91AD00419764 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T2759895US;
+				INFOPLIST_FILE = "AnimalDex AppTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.AnimalDex-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimalDex App.app/AnimalDex App";
+			};
+			name = Debug;
+		};
+		A0C9A05C25FF91AD00419764 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T2759895US;
+				INFOPLIST_FILE = "AnimalDex AppTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.AnimalDex-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimalDex App.app/AnimalDex App";
+			};
+			name = Release;
+		};
+		A0C9A05E25FF91AD00419764 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T2759895US;
+				INFOPLIST_FILE = "AnimalDex AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.AnimalDex-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "AnimalDex App";
+			};
+			name = Debug;
+		};
+		A0C9A05F25FF91AD00419764 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T2759895US;
+				INFOPLIST_FILE = "AnimalDex AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.AnimalDex-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "AnimalDex App";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A0C9A02D25FF91AA00419764 /* Build configuration list for PBXProject "AnimalDex App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0C9A05525FF91AD00419764 /* Debug */,
+				A0C9A05625FF91AD00419764 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0C9A05725FF91AD00419764 /* Build configuration list for PBXNativeTarget "AnimalDex App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0C9A05825FF91AD00419764 /* Debug */,
+				A0C9A05925FF91AD00419764 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0C9A05A25FF91AD00419764 /* Build configuration list for PBXNativeTarget "AnimalDex AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0C9A05B25FF91AD00419764 /* Debug */,
+				A0C9A05C25FF91AD00419764 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0C9A05D25FF91AD00419764 /* Build configuration list for PBXNativeTarget "AnimalDex AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0C9A05E25FF91AD00419764 /* Debug */,
+				A0C9A05F25FF91AD00419764 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A0C9A02A25FF91AA00419764 /* Project object */;
+}
