@@ -8,92 +8,49 @@
 import SwiftUI
 
 struct TrainerDetailsView: View {
-    /*
-    let user: User
     
-    @State private var reviewTitle: String = ""
-    @State private var reviewBody: String = ""
-    
-    @ObservedObject private var httpClient = HTTPUserClient()
+    let trainer: Trainer
+
+    @ObservedObject private var apiClient = ApiClient()
     
     @Environment(\.presentationMode) private var presentationMode
     
     
+    // deleteTrainer
+
     
-    private func deleteUser() {
-        HTTPUserClient().deleteUser(user: user){ success in
-            
-            DispatchQueue.main.async {
-                self.presentationMode.wrappedValue.dismiss()
-            }
-            
-        }
-    }
-    
-    private func saveReview() {
-        let review = Review(subject: self.reviewTitle, body: self.reviewBody, user: user)
-        HTTPUserClient().saveReview(review: review) { success in // ignoring the return value-bool, denoted with _
-            if success {
-                self.httpClient.getReviewsByUser(user: self.user)
-            }
-        }
-    }
-    */
+
     var body: some View {
-        Text("Dummy")
-        /*
         Form {
-            
-            Image(user.poster)
-                .resizable()
+            AsyncImage(
+                url:  URL(string: trainer.image)!,
+                           placeholder: { Text("Loading ...") },
+                           image: { Image(uiImage: $0).resizable() }
+                        )
                 .aspectRatio(contentMode: .fit)
                 .padding()
-            
-            Section(header: Text("ADD A REVIEW").fontWeight(.bold)) {
-                VStack(alignment: .center, spacing: 10) {
-                    TextField("Enter Title",text: $reviewTitle)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                    
-                    TextField("Enter Body",text: $reviewBody) .textFieldStyle(RoundedBorderTextFieldStyle())
-                    
-                    Button("Save") {
-                        self.saveReview()
-                    }
-                }
-                
-            }
-            
-            Section(header: Text("REVIEWS").fontWeight(.bold)) {
-              
-                ForEach(self.httpClient.reviews ?? [Review](), id: \.id) { review in
-                    Text(review.subject)
-                    
+            Section(header: Text("ANIMALS").fontWeight(.bold)) {
+                ForEach(self.apiClient.animals ?? [Animal](), id: \.id) { animal in
+                    Text(animal.name)
                 }
     
             }
         }.onAppear(perform: {
-            self.httpClient.getReviewsByUser(user: self.user)
+            self.apiClient.getAnimalsByTrainer(trainer: self.trainer)
         })
-        
-        
-        .navigationBarTitle(user.name)
-            
+        .navigationBarTitle(trainer.name)
         .navigationBarItems(trailing: Button(action: {
-            self.deleteUser()
+            //deleteTrainer
         }) {
             Image(systemName: "trash.fill")
         })
-        */
     }
     
 }
 
 struct TrainerDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        
-        TrainerDetailsView()
-   //     TrainerDetailsView(user: User(name: "Birds of Prey", poster: "birds"))
-        
+        TrainerDetailsView(trainer: Trainer( name: "Neo", image: "https://via.placeholder.com/200x350"))
     }
 }
 

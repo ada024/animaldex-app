@@ -16,7 +16,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(self.apiClient.trainers, id: \.id) { trainer in
-                NavigationLink(destination: TrainerDetailsView())
+                NavigationLink(destination: TrainerDetailsView(trainer: trainer))
                 {
                     VStack {
                         AsyncImage(
