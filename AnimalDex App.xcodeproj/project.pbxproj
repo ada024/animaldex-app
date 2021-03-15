@@ -13,6 +13,15 @@
 		A0C9A03D25FF91AD00419764 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C9A03C25FF91AD00419764 /* Preview Assets.xcassets */; };
 		A0C9A04825FF91AD00419764 /* AnimalDex_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C9A04725FF91AD00419764 /* AnimalDex_AppTests.swift */; };
 		A0C9A05325FF91AD00419764 /* AnimalDex_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C9A05225FF91AD00419764 /* AnimalDex_AppUITests.swift */; };
+		A0C9A06A25FF93CC00419764 /* TrainerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C9A06925FF93CC00419764 /* TrainerDetailsView.swift */; };
+		A0C9A06F25FF94A500419764 /* AddTrainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C9A06E25FF94A500419764 /* AddTrainerView.swift */; };
+		A0C9A07425FF976B00419764 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C9A07325FF976B00419764 /* ApiClient.swift */; };
+		A0C9A07925FF98BD00419764 /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C9A07825FF98BD00419764 /* Trainer.swift */; };
+		A0C9A07E25FF994000419764 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C9A07D25FF994000419764 /* Animal.swift */; };
+		A0C9A08425FFBB7600419764 /* ImageNewtork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C9A08325FFBB7600419764 /* ImageNewtork.swift */; };
+		A0C9A08C25FFBBD000419764 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C9A08B25FFBBD000419764 /* ImageLoader.swift */; };
+		A0C9A09125FFBC1000419764 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C9A09025FFBC1000419764 /* ImageCache.swift */; };
+		A0C9A09925FFBEF900419764 /* Env+ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C9A09825FFBEF900419764 /* Env+ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +54,15 @@
 		A0C9A04E25FF91AD00419764 /* AnimalDex AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AnimalDex AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C9A05225FF91AD00419764 /* AnimalDex_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDex_AppUITests.swift; sourceTree = "<group>"; };
 		A0C9A05425FF91AD00419764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0C9A06925FF93CC00419764 /* TrainerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerDetailsView.swift; sourceTree = "<group>"; };
+		A0C9A06E25FF94A500419764 /* AddTrainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrainerView.swift; sourceTree = "<group>"; };
+		A0C9A07325FF976B00419764 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		A0C9A07825FF98BD00419764 /* Trainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trainer.swift; sourceTree = "<group>"; };
+		A0C9A07D25FF994000419764 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		A0C9A08325FFBB7600419764 /* ImageNewtork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNewtork.swift; sourceTree = "<group>"; };
+		A0C9A08B25FFBBD000419764 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		A0C9A09025FFBC1000419764 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		A0C9A09825FFBEF900419764 /* Env+ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Env+ImageCache.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +113,11 @@
 		A0C9A03425FF91AA00419764 /* AnimalDex App */ = {
 			isa = PBXGroup;
 			children = (
+				A0C9A08225FFBAA000419764 /* ImageNetworkPlugin */,
+				A0C9A06525FF91FB00419764 /* Models */,
+				A0C9A06425FF91E900419764 /* Api Client */,
+				A0C9A06325FF91CC00419764 /* Views */,
 				A0C9A03525FF91AA00419764 /* AnimalDex_AppApp.swift */,
-				A0C9A03725FF91AA00419764 /* ContentView.swift */,
 				A0C9A03925FF91AD00419764 /* Assets.xcassets */,
 				A0C9A03E25FF91AD00419764 /* Info.plist */,
 				A0C9A03B25FF91AD00419764 /* Preview Content */,
@@ -128,6 +149,44 @@
 				A0C9A05425FF91AD00419764 /* Info.plist */,
 			);
 			path = "AnimalDex AppUITests";
+			sourceTree = "<group>";
+		};
+		A0C9A06325FF91CC00419764 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A0C9A03725FF91AA00419764 /* ContentView.swift */,
+				A0C9A06925FF93CC00419764 /* TrainerDetailsView.swift */,
+				A0C9A06E25FF94A500419764 /* AddTrainerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A0C9A06425FF91E900419764 /* Api Client */ = {
+			isa = PBXGroup;
+			children = (
+				A0C9A07325FF976B00419764 /* ApiClient.swift */,
+			);
+			path = "Api Client";
+			sourceTree = "<group>";
+		};
+		A0C9A06525FF91FB00419764 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A0C9A07825FF98BD00419764 /* Trainer.swift */,
+				A0C9A07D25FF994000419764 /* Animal.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A0C9A08225FFBAA000419764 /* ImageNetworkPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				A0C9A08325FFBB7600419764 /* ImageNewtork.swift */,
+				A0C9A08B25FFBBD000419764 /* ImageLoader.swift */,
+				A0C9A09025FFBC1000419764 /* ImageCache.swift */,
+				A0C9A09825FFBEF900419764 /* Env+ImageCache.swift */,
+			);
+			path = ImageNetworkPlugin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +318,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0C9A09125FFBC1000419764 /* ImageCache.swift in Sources */,
+				A0C9A06F25FF94A500419764 /* AddTrainerView.swift in Sources */,
 				A0C9A03825FF91AA00419764 /* ContentView.swift in Sources */,
+				A0C9A08425FFBB7600419764 /* ImageNewtork.swift in Sources */,
 				A0C9A03625FF91AA00419764 /* AnimalDex_AppApp.swift in Sources */,
+				A0C9A07925FF98BD00419764 /* Trainer.swift in Sources */,
+				A0C9A08C25FFBBD000419764 /* ImageLoader.swift in Sources */,
+				A0C9A09925FFBEF900419764 /* Env+ImageCache.swift in Sources */,
+				A0C9A07E25FF994000419764 /* Animal.swift in Sources */,
+				A0C9A06A25FF93CC00419764 /* TrainerDetailsView.swift in Sources */,
+				A0C9A07425FF976B00419764 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
