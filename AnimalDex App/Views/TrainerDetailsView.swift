@@ -17,7 +17,14 @@ struct TrainerDetailsView: View {
     
     
     // deleteTrainer
-
+    private func deleteTrainer() {
+        ApiClient().deleteTrainer(trainer: trainer){ success in
+            DispatchQueue.main.async {
+                self.presentationMode.wrappedValue.dismiss()
+            }
+            
+        }
+    }
     
 
     var body: some View {
@@ -41,6 +48,7 @@ struct TrainerDetailsView: View {
         .navigationBarTitle(trainer.name)
         .navigationBarItems(trailing: Button(action: {
             //deleteTrainer
+            self.deleteTrainer()
         }) {
             Image(systemName: "trash.fill")
         })

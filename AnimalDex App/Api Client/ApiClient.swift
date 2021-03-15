@@ -13,6 +13,23 @@ class ApiClient: ObservableObject {
     @Published var animals: [Animal]? = [Animal]()
     
     
+    
+    func deleteTrainer(trainer: Trainer, completion: @escaping (Bool) -> Void)  {
+           guard let uuid = trainer.id,
+           let url = URL(string: "http://localhost:8080/trainers/api/\(uuid.uuidString)") else {
+               fatalError("URL is not defined!")
+           }
+           var request = URLRequest(url: url)
+           request.httpMethod = "DELETE"
+           URLSession.shared.dataTask(with: request) { data, _, error in
+               guard let _ = data, error == nil else {
+                   return completion(false)
+               }
+               completion(true)
+           }.resume()
+       }
+    
+    
     func getTrainers()  {
         guard let url = URL(string: "http://localhost:8080/trainers/api") else {
             fatalError("URL is not defined!")
