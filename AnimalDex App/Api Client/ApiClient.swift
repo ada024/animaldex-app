@@ -58,11 +58,25 @@ class ApiClient: ObservableObject {
             }
            let decAnimals = try? JSONDecoder().decode([Animal].self, from: data)
             if let decAnimals = decAnimals {
-                print("STOP")
                 DispatchQueue.main.async {
                     self.animals = decAnimals
                 }
             }
         }.resume()
     }
+    
+    func deleteAnimal(uuid: UUID, completion: @escaping (Bool) -> Void) {
+    guard let url = URL(string: "http://localhost:8080/animals/delete/\(uuid.uuidString)") else {
+        fatalError("URL is not defined!")
+        }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        URLSession.shared.dataTask(with: request) { data, _, error in
+            guard let _ = data, error == nil else {
+                return completion(false)
+            }
+            completion(true)
+        }.resume()
+    }
+    
 }
