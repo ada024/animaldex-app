@@ -16,7 +16,7 @@ class ApiClient: ObservableObject {
     
     func deleteTrainer(trainer: Trainer, completion: @escaping (Bool) -> Void)  {
            guard let uuid = trainer.id,
-           let url = URL(string: "http://localhost:8080/trainers/api/\(uuid.uuidString)") else {
+           let url = URL(string: "http://localhost:8080/trainers/\(uuid.uuidString)") else {
                fatalError("URL is not defined!")
            }
            var request = URLRequest(url: url)
@@ -31,7 +31,7 @@ class ApiClient: ObservableObject {
     
     
     func getTrainers()  {
-        guard let url = URL(string: "http://localhost:8080/trainers/api") else {
+        guard let url = URL(string: "http://localhost:8080/api/trainers") else {
             fatalError("URL is not defined!")
         }
         URLSession.shared.dataTask(with: url) { data, response, error in
@@ -49,7 +49,7 @@ class ApiClient: ObservableObject {
     
     func getAnimalsByTrainer(trainer: Trainer) {
         guard let uuid = trainer.id,
-        let url = URL(string: "http://localhost:8080/trainers/api/\(uuid.uuidString)/animals") else {
+        let url = URL(string: "http://localhost:8080/api/trainers/\(uuid.uuidString)/animals") else {
             fatalError("URL is not defined!")
         }
         URLSession.shared.dataTask(with: url) { data, _, error in
@@ -58,6 +58,7 @@ class ApiClient: ObservableObject {
             }
            let decAnimals = try? JSONDecoder().decode([Animal].self, from: data)
             if let decAnimals = decAnimals {
+                print("STOP")
                 DispatchQueue.main.async {
                     self.animals = decAnimals
                 }

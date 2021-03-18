@@ -14,15 +14,11 @@ struct TrainerDetailsView: View {
     @ObservedObject private var apiClient = ApiClient()
     
     @Environment(\.presentationMode) private var presentationMode
-    
-    
-    // deleteTrainer
     private func deleteTrainer() {
         ApiClient().deleteTrainer(trainer: trainer){ success in
             DispatchQueue.main.async {
                 self.presentationMode.wrappedValue.dismiss()
             }
-            
         }
     }
     
@@ -37,17 +33,16 @@ struct TrainerDetailsView: View {
                 .aspectRatio(contentMode: .fit)
                 .padding()
             Section(header: Text("ANIMALS").fontWeight(.bold)) {
-                ForEach(self.apiClient.animals ?? [Animal](), id: \.id) { animal in
-                    Text(animal.name)
-                }
-    
+                List(self.apiClient.animals ?? [Animal](), id: \.id) { animal in
+                         AnimalRow(animal: animal)
+                     }
+                
             }
         }.onAppear(perform: {
             self.apiClient.getAnimalsByTrainer(trainer: self.trainer)
         })
         .navigationBarTitle(trainer.name)
         .navigationBarItems(trailing: Button(action: {
-            //deleteTrainer
             self.deleteTrainer()
         }) {
             Image(systemName: "trash.fill")

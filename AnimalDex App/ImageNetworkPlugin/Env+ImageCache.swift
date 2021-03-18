@@ -1,4 +1,3 @@
-//
 //  Env+ImageCache.swift
 //  AnimalDex App
 //

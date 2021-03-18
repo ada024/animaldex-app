@@ -18,21 +18,18 @@ struct ContentView: View {
             List(self.apiClient.trainers, id: \.id) { trainer in
                 NavigationLink(destination: TrainerDetailsView(trainer: trainer))
                 {
-                    VStack {
+                    VStack(alignment: .leading) {
                         AsyncImage(
                             url:  URL(string: trainer.image)!,
                                        placeholder: { Text("Loading ...") },
                                        image: { Image(uiImage: $0).resizable() }
                                     )
-                        .frame(idealHeight: UIScreen.main.bounds.width / 1.5)
+                        .frame(width: 155, height: 155).cornerRadius(5)
                         Text(trainer.name)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .foregroundColor(Color.white)
-                            .background(Color.blue)
-                            .font(.system(size: 20))
-                            .cornerRadius(10)
-                    }
+                            .font(.headline)
+                            .padding(.leading, 15)
+                            .padding(.top, 5)
+                    }.padding(.leading, 15)
                 }
             }
             
