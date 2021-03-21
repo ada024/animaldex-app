@@ -37,11 +37,18 @@ class ApiClient: ObservableObject {
         guard let composedURL = components.url else {print("URL creating failed");return}
         var request = URLRequest(url: composedURL)
         request.httpMethod = "DELETE"
-        URLSession.shared.dataTask(with: request) { data, _, error in
-            guard let _ = data, error == nil else {
-                return completion(false)
+        URLSession.shared.dataTask(with: request) { data, res, error in
+            if let httpRes = res as? HTTPURLResponse {
+                print("Status Code: \(httpRes.statusCode)")
+                
+                if httpRes.statusCode == 200 {
+                    completion(true)
+                }else {
+                    completion(false)
+                }
             }
-            completion(true)
+            //            guard let _ = data, error == nil else {return completion(false)}
+            //            completion(true)
         }.resume()
     }
     
