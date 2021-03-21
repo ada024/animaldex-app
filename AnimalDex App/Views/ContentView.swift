@@ -11,8 +11,8 @@ struct ContentView: View {
     @State private var isPresented: Bool = false
     @Environment(\.presentationMode) var presentationMode
     let screenSize = UIScreen.main.bounds
-   @ObservedObject var apiClient = ApiClient()
-
+    @ObservedObject var apiClient = ApiClient()
+    
     var body: some View {
         NavigationView {
             List(self.apiClient.trainers, id: \.id) { trainer in
@@ -21,9 +21,9 @@ struct ContentView: View {
                     VStack(alignment: .leading) {
                         AsyncImage(
                             url:  URL(string: trainer.image)!,
-                                       placeholder: { Text("Loading ...") },
-                                       image: { Image(uiImage: $0).resizable() }
-                                    )
+                            placeholder: { Text("Loading ...") },
+                            image: { Image(uiImage: $0).resizable() }
+                        )
                         .frame(width: 155, height: 155).cornerRadius(5)
                         Text(trainer.name)
                             .font(.headline)
@@ -33,7 +33,7 @@ struct ContentView: View {
                 }
             }
             
-        .navigationBarTitle("Trainers")
+            .navigationBarTitle("Trainers")
             .navigationBarItems(trailing: Button(action: {
                 self.isPresented = true
             }){
@@ -49,11 +49,6 @@ struct ContentView: View {
         }, content: {
             AddTrainerView()
         })
-        
-        
-        
-        
-        
     }
 }
 

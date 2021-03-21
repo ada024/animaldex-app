@@ -8,25 +8,19 @@
 import Foundation
 
 class ApiClient: ObservableObject {
-    
+    private let baseURL = "localhost"
     @Published var trainers: [Trainer] = [Trainer]()
     @Published var animals: [Animal]? = [Animal]()
     
-    
-    
     func addTrainer(name: String,image: String, completion: @escaping (Bool) -> Void)  {
-        guard let url = URL(string: "http://localhost:8080/trainers") else {
-            fatalError("URL is not defined!")
-        }
-        
+        let components =  composeURLComponent(path: "/trainers")
+        guard let composedURL = components.url else {print("URL creating failed");return}
+        var request = URLRequest(url: composedURL)
         let trainer = Trainer(name: name, image: image)
-        var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = try? JSONEncoder().encode(trainer)
-        
         URLSession.shared.dataTask(with: request) { data, response, error in
-            
             guard let _ = data, error == nil else {
                 return completion(false)
             }
@@ -38,11 +32,10 @@ class ApiClient: ObservableObject {
     
     
     func deleteTrainer(trainer: Trainer, completion: @escaping (Bool) -> Void)  {
-        guard let uuid = trainer.id,
-              let url = URL(string: "http://localhost:8080/trainers/\(uuid.uuidString)") else {
-            fatalError("URL is not defined!")
-        }
-        var request = URLRequest(url: url)
+        guard let uuid = trainer.id else {fatalError("Missing uid!")}
+        let components =  composeURLComponent(path: "/trainers/\(uuid.uuidString)")
+        guard let composedURL = components.url else {print("URL creating failed");return}
+        var request = URLRequest(url: composedURL)
         request.httpMethod = "DELETE"
         URLSession.shared.dataTask(with: request) { data, _, error in
             guard let _ = data, error == nil else {
@@ -54,13 +47,10 @@ class ApiClient: ObservableObject {
     
     
     func getTrainers()  {
-        guard let url = URL(string: "http://127.0.0.1:8080/api/trainers") else {
-            fatalError("URL is not defined!")
-        }
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data, error == nil else {
-                return
-            }
+        let components =  composeURLComponent(path: "/api/trainers")
+        guard let composedURL = components.url else {print("URL is not defined!");return}
+        URLSession.shared.dataTask(with: composedURL) { data, response, error in
+            guard let data = data, error == nil else {fatalError("URL format is wrong!")}
             let trainers = try? JSONDecoder().decode([Trainer].self, from: data)
             if let trainers = trainers {
                 DispatchQueue.main.async {
@@ -68,19 +58,21 @@ class ApiClient: ObservableObject {
                 }
             }
         }.resume()
+        
     }
     
     func getAnimalsByTrainer(trainer: Trainer) {
-        guard let uuid = trainer.id,
-              let url = URL(string: "http://localhost:8080/api/trainers/\(uuid.uuidString)/animals") else {
-            fatalError("URL is not defined!")
-        }
-        URLSession.shared.dataTask(with: url) { data, _, error in
+        guard let uuid = trainer.id else {fatalError("Missing uid!")}
+        let components =  composeURLComponent(path: "/api/trainers/\(uuid.uuidString)/animals")
+        guard let composedURL = components.url else {print("URL is not defined!");return}
+        URLSession.shared.dataTask(with: composedURL) { data, _, error in
             guard let data = data, error == nil else {
+                print("Some error \(String(describing: error))")
                 return
             }
             let decAnimals = try? JSONDecoder().decode([Animal].self, from: data)
             if let decAnimals = decAnimals {
+                print(decAnimals)
                 DispatchQueue.main.async {
                     self.animals = decAnimals
                 }
@@ -89,10 +81,9 @@ class ApiClient: ObservableObject {
     }
     
     func deleteAnimal(uuid: UUID, completion: @escaping (Bool) -> Void) {
-        guard let url = URL(string: "http://localhost:8080/animals/delete/\(uuid.uuidString)") else {
-            fatalError("URL is not defined!")
-        }
-        var request = URLRequest(url: url)
+        let components =  composeURLComponent(path: "/animals/delete/\(uuid.uuidString)/animals")
+        guard let composedURL = components.url else {print("URL creating failed");return}
+        var request = URLRequest(url: composedURL)
         request.httpMethod = "POST"
         URLSession.shared.dataTask(with: request) { data, _, error in
             guard let _ = data, error == nil else {
@@ -102,4 +93,12 @@ class ApiClient: ObservableObject {
         }.resume()
     }
     
+    func composeURLComponent(path: String) -> URLComponents {
+        var components = URLComponents()
+        components.scheme = "http"
+        components.host = baseURL
+        components.port = 8080
+        components.path = path
+        return components
+    }
 }
