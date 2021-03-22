@@ -7,9 +7,16 @@
 
 import Foundation
 
+public enum ApiError: Error {
+    case notFound // 404
+    case serverError // 5xx
+    case requestError // 4xx
+    case jsonError
+}
+
+
 class ApiClient: ObservableObject {
     private let baseURL = "localhost"
-    @Published var trainers: [Trainer] = [Trainer]()
     @Published var animals: [Animal]? = [Animal]()
     
     func addTrainer(name: String,image: String, completion: @escaping (Bool) -> Void)  {
@@ -47,25 +54,31 @@ class ApiClient: ObservableObject {
                     completion(false)
                 }
             }
-            //            guard let _ = data, error == nil else {return completion(false)}
-            //            completion(true)
         }.resume()
     }
     
     
-    func getTrainers()  {
+    func getTrainers(completion: @escaping (Result<[Trainer], Error>) -> Void) {
         let components =  composeURLComponent(path: "/api/trainers")
         guard let composedURL = components.url else {print("URL is not defined!");return}
         URLSession.shared.dataTask(with: composedURL) { data, response, error in
-            guard let data = data, error == nil else {fatalError("URL format is wrong!")}
-            let trainers = try? JSONDecoder().decode([Trainer].self, from: data)
-            if let trainers = trainers {
-                DispatchQueue.main.async {
-                    self.trainers = trainers
+            guard let jsonData = data else {
+                completion(.failure("JSON error" as! Error))
+                return
+            }
+            do {
+                let trainers = try JSONDecoder().decode([Trainer]?.self, from: jsonData)
+                if let trainers = trainers {
+                    DispatchQueue.main.async {
+                        completion(.success(trainers))
+                    }
                 }
+            } catch  let serverError{
+                let bodyString = String(data: data!, encoding: .utf8)
+                print("error \(String(describing: bodyString))")
+                completion(.failure("Some error: \(serverError)" as! Error))
             }
         }.resume()
-        
     }
     
     func getAnimalsByTrainer(trainer: Trainer) {

@@ -11,11 +11,14 @@ struct ContentView: View {
     @State private var isPresented: Bool = false
     @Environment(\.presentationMode) var presentationMode
     let screenSize = UIScreen.main.bounds
-    @ObservedObject var apiClient = ApiClient()
+   // @ObservedObject var apiClient = ApiClient()
+    @State var trainers: [Trainer] = []
+    
     
     var body: some View {
         NavigationView {
-            List(self.apiClient.trainers, id: \.id) { trainer in
+            List(trainers, id: \.id) { trainer in
+          //      List( id: \.id) { trainer in
                 NavigationLink(destination: TrainerDetailsView(trainer: trainer))
                 {
                     VStack(alignment: .leading) {
@@ -40,12 +43,36 @@ struct ContentView: View {
                 Image(systemName: "plus")
             })
             .onAppear() {
-                self.apiClient.getTrainers()
+                ApiClient().getTrainers { [self] (result: Result<[Trainer], Error>) in
+                    switch result {
+                    case .success(let trainers):
+                        self.trainers = trainers
+                    case .failure(let error):
+                      print("error getting trainings \(error)")
+                    }
+                    
+                  //  self.trainers = trainers
+                }
+             //   self.apiClient.getTrainers()
             }
             
             
         }.sheet(isPresented: $isPresented , onDismiss: {
-            self.apiClient.getTrainers()
+            ApiClient().getTrainers { [self] (result: Result<[Trainer], Error>) in
+                switch result {
+                case .success(let trainers):
+                    self.trainers = trainers
+                case .failure(let error):
+                  print("error getting trainings \(error)")
+                }
+                
+              //  self.trainers = trainers
+            }
+            
+            
+            
+            
+          //  self.apiClient.getTrainers()
         }, content: {
             AddTrainerView()
         })
